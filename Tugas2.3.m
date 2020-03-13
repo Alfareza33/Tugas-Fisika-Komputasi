@@ -13,7 +13,7 @@ d=linspace(15,20);
 plot(d,f(d));
 itermaks= 1000;
 epsilon= 10^(-20);
-dlama=16.15;
+dlama=1;
 for k= 1:itermaks;
     dbaru=dlama-(f(dlama)/turunan(dlama));
     if abs(dbaru-dlama) < epsilon;
