@@ -1,0 +1,24 @@
+clc
+clear
+
+h=linspace(-4,4,50);
+y=f(h);
+
+panjang_data = length(h)
+for i=2:panjang_data;
+    h_baru=h(i);
+    h_lama=h(i-1);
+    y_baru=f(h_baru);
+    y_lama=f(h_lama);
+    if y_lama*y_baru<0
+        disp('nilai h ketemu !')
+        Nilai_h= (h_baru+h_lama)/2
+    else
+        disp('nilai h tidak ketemu')
+    end
+    break
+end
+
+function y=f(h)
+y=4*acos((2-h)/2)-(2-h).*sqrt(4*h-h.^2)).*5-8;
+end
